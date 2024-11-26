@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 const { login } = require('./loginHelper'); // Import the login helper function
-const testCases = require('../tests.json'); // Import test cases from a JSON file
+const testCases = require('./tests.json'); // Import test cases from a JSON file
 
 // Configuration for locators and constants
 const locators = {

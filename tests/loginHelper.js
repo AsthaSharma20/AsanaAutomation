@@ -1,11 +1,12 @@
+require('dotenv').config();
 const { expect } = require('@playwright/test');
 
 // Configuration object for login credentials and locators
 const config = {
     url: 'https://app.asana.com/-/login',
     credentials: {
-        email: 'ben+pose@workwithloop.com',
-        password: 'Password123',
+        email: process.env.ASANA_EMAIL,
+        password: process.env.ASANA_PASSWORD,
     },
     locators: {
         emailField: 'Email address',
