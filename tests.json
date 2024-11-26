@@ -1,0 +1,68 @@
+[
+    {
+        "testName": "Verify 'Draft project brief' in 'To do' column",
+        "section": "Cross-functional project plan, Project",
+        "task": "Draft project brief",
+        "column": "To do",
+        "tags": [
+            "Non-Priority",
+            "On track"
+        ]
+    },
+    {
+        "testName": "Verify 'Schedule kickoff meeting' in 'To do' column",
+        "section": "Cross-functional project plan, Project",
+        "task": "Schedule kickoff meeting",
+        "column": "To do",
+        "tags": [
+            "Medium",
+            "At risk"
+        ]
+    },
+    {
+        "testName": "Verify 'Share timeline with teammates' in 'To do' column",
+        "section": "Cross-functional project plan, Project",
+        "task": "Share timeline with teammates",
+        "column": "To do",
+        "tags": [
+            "High",
+            "Off track"
+        ]
+    },
+    {
+        "testName": "Verify '[Example] Laptop setup for new hire' in 'New Requests' column",
+        "section": "Work Requests",
+        "task": "[Example] Laptop setup for new hire",
+        "column": "New Requests",
+        "tags": [
+            "Medium priority",
+            "Low effort",
+            "New hardware",
+            "Not Started"
+        ]
+    },
+    {
+        "testName": "Verify '[Example] Password not working' in 'In Progress' column",
+        "section": "Work Requests",
+        "task": "[Example] Password not working",
+        "column": "In Progress",
+        "tags": [
+            "Low effort",
+            "Low priority",
+            "Password reset",
+            "Waiting"
+        ]
+    },
+    {
+        "testName": "Verify '[Example] New keycard for Daniela V' in 'Completed' column",
+        "section": "Work Requests",
+        "task": "[Example] New keycard for Daniela V",
+        "column": "Completed",
+        "tags": [
+            "Low effort",
+            "New hardware",
+            "High Priority",
+            "Done"
+        ]
+    }
+]
