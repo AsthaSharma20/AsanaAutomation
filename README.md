@@ -22,7 +22,6 @@ cd asana-automation
 Install the required dependencies for the project:
 
 ```bash
-Copy code
 npm install
 ```
 ### 3. Set Up Environment Variables
