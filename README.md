@@ -50,14 +50,14 @@ This command will run the automation tests defined in asanaTests.spec.js and ver
 ### 5. Customizing the Tests
 You can modify the test cases by editing the tests.json file, where each test case includes:
 
-testName: The name of the test
-section: The section of the Asana project
-task: The task to verify
-column: The column where the task should appear
-tags: The tags to verify associated with the task
+- testName: The name of the test
+- section: The section of the Asana project
+- task: The task to verify
+- column: The column where the task should appear
+- tags: The tags to verify associated with the task
 Example of a test case in tests.json:
 
-json
+```bash
 
 [
     {
@@ -68,6 +68,8 @@ json
         "tags": ["Non-Priority", "On track"]
     }
 ]
+```
+
 Project Structure
 The project is organized into the following directory structure:
 
@@ -86,16 +88,16 @@ asana-automation/
 ```
 
 File Descriptions
-tests/: This directory contains all the testing-related files.
-asanaTests.spec.js: The main test file, where the Playwright test suite is defined. It includes the test logic for verifying tasks in Asana.
-loginHelper.js: A helper file containing the login function, which automates the login process for Asana.
-tests.json: This JSON file contains an array of test cases, each of which specifies the section, task, column, and tags to verify.
-.env: Contains sensitive information like your Asana login credentials. These values are loaded into the application via process.env.
-package.json: The Node.js project configuration file, which defines dependencies and scripts.
-playwright.config.js: The configuration file for Playwright, where test settings like timeouts, base URL, and global setup can be defined.
-README.md: The documentation file providing an overview of the project, setup instructions, and usage.
+- tests/: This directory contains all the testing-related files.
+- asanaTests.spec.js: The main test file, where the Playwright test suite is defined. It includes the test logic for verifying tasks in Asana.
+- loginHelper.js: A helper file containing the login function, which automates the login process for Asana.
+- tests.json: This JSON file contains an array of test cases, each of which specifies the section, task, column, and tags to verify.
+- .env: Contains sensitive information like your Asana login credentials. These values are loaded into the application via process.env.
+- package.json: The Node.js project configuration file, which defines dependencies and scripts.
+- playwright.config.js: The configuration file for Playwright, where test settings like timeouts, base URL, and global setup can be defined.
+- README.md: The documentation file providing an overview of the project, setup instructions, and usage.
 
 How It Works
-Login: The login function automates the login process to Asana using the credentials from the .env file.
-Test Execution: Each test case navigates to a specified Asana project, locates tasks based on their column and tags, and verifies their presence.
-Test Results: The test results will indicate whether the tasks and their associated tags are correctly displayed in the specified columns.
+- Login: The login function automates the login process to Asana using the credentials from the .env file.
+- Test Execution: Each test case navigates to a specified Asana project, locates tasks based on their column and tags, and verifies their presence.
+- Test Results: The test results will indicate whether the tasks and their associated tags are correctly displayed in the specified columns.
