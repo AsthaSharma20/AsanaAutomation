@@ -17,32 +17,35 @@ Clone this repository to your local machine:
 ```bash
 git clone https://github.com/AsthaSharma20/AsanaAutomation.git
 cd asana-automation
-### 2. Install Dependencies
+2. Install Dependencies
 Install the required dependencies for the project:
 
-```bash
+bash
+Copy code
 npm install
-### 3. Set Up Environment Variables
+3. Set Up Environment Variables
 Create a .env file in the root of your project to store sensitive information such as your Asana login credentials.
 
 Example .env file:
 
-```bash
 env
+Copy code
 ASANA_EMAIL=your-email@example.com
 ASANA_PASSWORD=your-password
 Important: Ensure the .env file is not committed to version control. It is recommended to add .env to your .gitignore file to keep sensitive data secure.
 
-```bash
+bash
+Copy code
 npm install dotenv // install this to use the variables
-### 4. Run the Tests
+4. Run the Tests
 After setting up the .env file, you can run the tests using Playwright’s test runner.
 
-```bash
+bash
+Copy code
 npx playwright test
 This command will run the automation tests defined in asanaTests.spec.js and verify tasks across different sections in your Asana projects.
 
-### 5. Customizing the Tests
+5. Customizing the Tests
 You can modify the test cases by editing the tests.json file, where each test case includes:
 
 testName: The name of the test
@@ -52,9 +55,8 @@ column: The column where the task should appear
 tags: The tags to verify associated with the task
 Example of a test case in tests.json:
 
-```bash
 json
-
+Copy code
 [
     {
         "testName": "Verify 'Draft project brief' in 'To do' column",
@@ -67,7 +69,8 @@ json
 Project Structure
 The project is organized into the following directory structure:
 
-```bash
+bash
+Copy code
 asana-automation/
 ├── .env                  # Stores environment variables like email and password for login
 ├── node_modules/          # Node.js modules installed by npm
