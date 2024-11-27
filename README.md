@@ -17,35 +17,37 @@ Clone this repository to your local machine:
 ```bash
 git clone https://github.com/AsthaSharma20/AsanaAutomation.git
 cd asana-automation
-2. Install Dependencies
+```
+### 2. Install Dependencies
 Install the required dependencies for the project:
 
-bash
+```bash
 Copy code
 npm install
-3. Set Up Environment Variables
+```
+### 3. Set Up Environment Variables
 Create a .env file in the root of your project to store sensitive information such as your Asana login credentials.
 
 Example .env file:
 
-env
-Copy code
+```bash
 ASANA_EMAIL=your-email@example.com
 ASANA_PASSWORD=your-password
+```
 Important: Ensure the .env file is not committed to version control. It is recommended to add .env to your .gitignore file to keep sensitive data secure.
 
-bash
-Copy code
+```bash
 npm install dotenv // install this to use the variables
-4. Run the Tests
+```
+### 4. Run the Tests
 After setting up the .env file, you can run the tests using Playwright’s test runner.
 
-bash
-Copy code
+```bash
 npx playwright test
+```
 This command will run the automation tests defined in asanaTests.spec.js and verify tasks across different sections in your Asana projects.
 
-5. Customizing the Tests
+### 5. Customizing the Tests
 You can modify the test cases by editing the tests.json file, where each test case includes:
 
 testName: The name of the test
@@ -56,7 +58,7 @@ tags: The tags to verify associated with the task
 Example of a test case in tests.json:
 
 json
-Copy code
+
 [
     {
         "testName": "Verify 'Draft project brief' in 'To do' column",
@@ -69,8 +71,8 @@ Copy code
 Project Structure
 The project is organized into the following directory structure:
 
-bash
-Copy code
+```bash
+
 asana-automation/
 ├── .env                  # Stores environment variables like email and password for login
 ├── node_modules/          # Node.js modules installed by npm
@@ -81,6 +83,8 @@ asana-automation/
 ├── package.json           # Project metadata and dependencies
 ├── playwright.config.js   # Playwright configuration file
 └── README.md              # Project documentation (this file)
+```
+
 File Descriptions
 tests/: This directory contains all the testing-related files.
 asanaTests.spec.js: The main test file, where the Playwright test suite is defined. It includes the test logic for verifying tasks in Asana.
@@ -90,6 +94,7 @@ tests.json: This JSON file contains an array of test cases, each of which specif
 package.json: The Node.js project configuration file, which defines dependencies and scripts.
 playwright.config.js: The configuration file for Playwright, where test settings like timeouts, base URL, and global setup can be defined.
 README.md: The documentation file providing an overview of the project, setup instructions, and usage.
+
 How It Works
 Login: The login function automates the login process to Asana using the credentials from the .env file.
 Test Execution: Each test case navigates to a specified Asana project, locates tasks based on their column and tags, and verifies their presence.
